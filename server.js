@@ -7,9 +7,10 @@ connectDB();
 // Template Engine
 
 
+const PORT = process.env.PORT || 3000;
 // Cors
 const corsOptions = {
-    origin: process.app.env.ALLOWED_CLIENTS.split(',')
+    origin: process.env.ALLOWED_CLIENTS.split(',')
     
 }
 app.use(cors(corsOptions));
@@ -19,7 +20,6 @@ app.use(express.static('public'))
 app.use(express.json());
 
 
-const PORT = process.env.PORT || 3000;
 
 // Routes Information
 
